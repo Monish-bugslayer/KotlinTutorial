@@ -23,12 +23,12 @@ fun main(){
         GlobalScope.launch(Dispatchers.IO) {
             val time=measureTimeMillis {
                 val call1=async {  AsyncAwait.networkCall1 {"Async NetworkCall 1"} }//waits till the network 1 call is completed
-                val call2=async {AsyncAwait.networkCall2 {"Async NetworkCall  d2"} }
+                val call2=async {AsyncAwait.networkCall2 {"Async NetworkCall 2"} }
                 call1.await()
                 call2.await()
             }
 
-            println("Async time = ${time}")//takes only 2 sec to complete both the task
+            println("Async time = ${time}")//takes only 1 sec to complete both the task
         }
     }
     NoAsyncAwait.createCoroutine{
@@ -39,10 +39,9 @@ fun main(){
                     NoAsyncAwait.networkCall2 {"launch NetworkCall 2"} }
                 job1.join()
             }
-            println("Launch time = ${time}")//takes only 2 sec to complete both the task
+            println("Launch time = ${time}")//takes 2 sec to complete both the task
         }
     }
-
     Thread.sleep(3000)
 }
 
