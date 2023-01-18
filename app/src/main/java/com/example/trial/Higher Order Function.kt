@@ -22,6 +22,9 @@ fun multiply(a:Int,b:Int,mul:(Int,Int)->Int):Int{
     return mul(a,b)
 }
 
+//higher order function with generics
+fun <T> higherOrderWithGenerics(n:T,someBody: (T) -> Int){someBody(n)}
+
 
 
 
@@ -37,6 +40,14 @@ fun main(){
         for(i in list){
             println(i)
         }
+    }
+
+    higherOrderWithGenerics(10) { n ->
+        var r:Int=0
+        for(i in 0..n){
+            r+=i
+        }
+        r
     }
 }
 
