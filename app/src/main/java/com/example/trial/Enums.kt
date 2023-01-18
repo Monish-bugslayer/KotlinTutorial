@@ -5,7 +5,8 @@ import androidx.annotation.RequiresApi
 
 /* Enums are named list of Constants
 * When u have defined set of constants u will be using enums
-* Enums can also inherited with interfaces*/
+* Enums can also inherited with interfaces
+* Enums can also used to handle errors*/
 enum class MONTHS{
     JAN,FEB,MAR,APR,MAY,JUN,JLY,AUG,SEPT,NOV,DEC
 }
