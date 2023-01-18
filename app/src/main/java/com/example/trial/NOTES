@@ -1,0 +1,33 @@
+activity_main.xml is the intermediater between android os and application.
+AndroidManifest file which contains information that a device needs inorder to run the app
+when user touch the button in the app it activity_main will go to android manifest and then the
+android mainifest will do the necessary work
+the xml layout file contains views like button and so on
+
+
+gradle is a automated build system
+It converts the code and packages into deployable unit
+written in groovy language
+Plugins
+metadata->contains the information about our app[ version and so on(group and version)
+repositories -> also supports jcenter , google and other repositories
+dependencies that required to develop our app
+Gradle suports single project and ,multiproject build structure
+Single project build structure is with single build option
+multiproject has multiple build outputs
+./gradlew tasks to see the tasks
+
+
+if we want to add some dependencies then we have to add those in the gradle.app file
+
+
+Gravity is used to make center
+first i have to create linear horizontal layout
+    set constrains as : layout_height=wrap content
+                      : layout_width=0
+                      : bottom_constrain=0
+                      :left and right constrains=0
+put card view inside the layout
+    change cardview corner radius = 8
+    set margin as 10 dp
+inside card view put a text view and display a text Moves: 0 and make it center using gravity
