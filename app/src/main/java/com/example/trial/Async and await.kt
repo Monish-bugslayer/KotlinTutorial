@@ -23,7 +23,7 @@ fun main(){
         GlobalScope.launch(Dispatchers.IO) {
             val time=measureTimeMillis {
                 val call1=async {  AsyncAwait.networkCall1 {"Async NetworkCall 1"} }//waits till the network 1 call is completed
-                val call2=async {AsyncAwait.networkCall2 {"Async NetworkCall 2"} }
+                val call2=async {AsyncAwait.networkCall2 {"Async NetworkCall  d2"} }
                 call1.await()
                 call2.await()
             }
